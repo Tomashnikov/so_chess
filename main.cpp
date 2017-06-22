@@ -5,11 +5,17 @@
 #include <vector>
 #include <thread>
 #include <ctime>
+#include <queue>
 
 using namespace std;
 
 void boardClear();
 void boardState();
+
+queue <int> queue1;
+queue <int> queue2;
+std::mutex q1;
+std::mutex q2;
 
 std::vector<std::vector<bool> > board;   //board matrix
 std::mutex mx;                           //matrix mutex
