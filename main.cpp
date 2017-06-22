@@ -9,6 +9,7 @@
 using namespace std;
 
 void boardClear();
+void boardState();
 
 std::vector<std::vector<bool> > board;   //board matrix
 std::mutex mx;                           //matrix mutex
@@ -24,6 +25,7 @@ int main()
 	initscr();
 
     auto tClear = thread(boardClear);
+    auto tPrint = thread(boardState);
 
 
 	endwin();

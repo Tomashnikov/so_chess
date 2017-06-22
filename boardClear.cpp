@@ -2,6 +2,7 @@
 #include <mutex>
 #include <thread>
 
+
 using namespace std;
 
 extern std::vector<std::vector<bool> > board;   //board matrix
